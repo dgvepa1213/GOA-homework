@@ -1,0 +1,1 @@
+print("me gavicani-Guram Vakhtangashvili, Saba Dzirkvadze, Batoni Nika Kheshelava")
