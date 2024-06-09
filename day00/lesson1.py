@@ -8,7 +8,8 @@ from turtle import*
 
 
 
-speed(15)
+speed(5)
+      
 
 
 width(7)
