@@ -8,7 +8,8 @@ from turtle import*
 
 
 
-speed(3)
+speed(15)
+
 
 width(7)
 color("blue")
