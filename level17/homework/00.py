@@ -1,0 +1,37 @@
+#მომხმარებელს შემოატანინეთ 2 რიცხვი, და შემდეგ მოახდინეთ ამ ორ რიცხვს შორის მათემატიკური ოპერაცია.
+
+num = input("enter your number")
+print(5 + 1)
+print(5 + 4)
+print(5 + 8)
+print(5 + 6)
+print(5 + 3)
+print(5 - 1)
+print(5 - 2)
+print(5 - 3)
+print(5 - 4)
+print(5 - 5)
+print(5 * 1)
+print(5 * 3)
+print(5 * 4)
+print(5 * 7)
+print(5 * 2)
+
+
+
+
+print(7 + 1)
+print(7 + 2)
+print(7 + 3)
+print(7 + 4)
+print(7 + 5)
+print(7 - 1)
+print(7 - 4)
+print(7 - 5)
+print(7 - 2)
+print(7 - 6)
+print(7 * 2)
+print(7 * 4)
+print(7 * 8)
+print(7 * 1)
+print(7 * 6)
