@@ -11,11 +11,12 @@ def simple_calculator(num1, num2, operation):
         else:
             return num1 / num2
     else:
-        return "შეცდომა: გაურკვეველი ოპერაცია"
+        return "შეცდომა: არასწორი ოპერაცია"
 
-# ფუნქციის გამოძახება და შედეგების დაბეჭდვა
-print(simple_calculator(10, 5, "დამატება"))    # Output: 15
-print(simple_calculator(10, 5, "გამოკლება"))  # Output: 5
-print(simple_calculator(10, 5, "გამრავლება")) # Output: 50
-print(simple_calculator(10, 5, "გაყოფა"))     # Output: 2.0
-print(simple_calculator(10, 0, "გაყოფა"))     # Output: შეცდომა: ნულზე გაყოფა შეუძლებელია
+# ფუნქციის გამოძახება სხვადასხვა ოპერაციებით და შედეგების დაბეჭდვა
+print(simple_calculator(10, 5, "დამატება"))      # 15
+print(simple_calculator(10, 5, "გამოკლება"))    # 5
+print(simple_calculator(10, 5, "გამრავლება"))   # 50
+print(simple_calculator(10, 0, "გაყოფა"))       # შეცდომა: ნულზე გაყოფა შეუძლებელია
+print(simple_calculator(10, 5, "გაყოფა"))       # 2.0
+print(simple_calculator(10, 5, "არასწორი"))     # შეცდომა: არასწორი ოპერაცია
