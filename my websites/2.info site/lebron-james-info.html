@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeBron James Information Page</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 400% 400%;
+            animation: rainbow 10s ease infinite;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .info-container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            width: 500px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .info-container h1 {
+            margin-bottom: 20px;
+        }
+
+        .info-container p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="info-container">
+        <h1>LeBron James</h1>
+        <p>
+            LeBron James (born December 30, 1984) is an American professional basketball player,
+            widely regarded as one of the greatest basketball players in NBA history.
+        </p>
+        <p>
+            James has won four NBA championships and has been named NBA Finals MVP four times.
+            He is also a two-time Olympic gold medalist and has had a significant impact on and off the court.
+        </p>
+        <p>
+            Beyond basketball, LeBron is known for his philanthropic efforts, including the LeBron James Family Foundation,
+            which focuses on education and community development.
+        </p>
+    </div>
+
+
+
+
+    <button onclick="redirectToLoginPage()">Back</button>
+    </div>
+
+    <script>
+        function redirectToLoginPage() {
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>
+

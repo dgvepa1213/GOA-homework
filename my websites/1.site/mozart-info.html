@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mozart Information Page</title>
+    <style>
+        /* Set the body to have a full-screen gradient rainbow background */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 400% 400%;
+            animation: rainbow 10s ease infinite;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        /* Animation to create a flowing rainbow effect */
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .info-container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            width: 500px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .info-container h1 {
+            margin-bottom: 20px;
+        }
+
+        .info-container p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="info-container">
+        <h1>Wolfgang Amadeus Mozart</h1>
+        <p>
+            Wolfgang Amadeus Mozart (1756–1791) was a prolific and influential composer of the Classical period. 
+            Born in Salzburg, Austria, Mozart showed prodigious ability from his earliest childhood.
+        </p>
+        <p>
+            He composed over 600 works, many acknowledged as pinnacles of symphonic, chamber, operatic, and choral music.
+            His best-known compositions include *The Magic Flute*, *Eine kleine Nachtmusik*, and *Requiem*.
+        </p>
+        <p>
+            Mozart's music is characterized by its melodic beauty, formal elegance, and emotional depth, making him one of the greatest composers in Western music history.
+        </p>
+    </div>
+</body>
+</html>
+
