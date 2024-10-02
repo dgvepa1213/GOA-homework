@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Tables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: center;
+        }
+        th, td {
+            padding: 12px;
+        }
+        th {
+            background-color: #20b2aa; /* თეთრი-ცისფერი ფონი */
+            color: black;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #a52a2a; /* ყავისფერი ფონი */
+            color: black;
+        }
+        tr:nth-child(odd) {
+            background-color: #20b2aa; /* თეთრი-ცისფერი ფონი */
+            color: black;
+        }
+        tr {
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* მსგავსი შრიფტი */
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Elly</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Nick</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>David</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td>Barbie</td>
+            <td>29</td>
+        </tr>
+        <tr>
+            <td>Eliot</td>
+            <td>42</td>
+        </tr>
+        <tr>
+            <td>Anastaisha</td>
+            <td>50</td>
+        </tr>
+    </table>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Emma</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Chris</td>
+            <td>99</td>
+        </tr>
+        <tr>
+            <td>David</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>Sasha</td>
+            <td>78</td>
+        </tr>
+        <tr>
+            <td>Lucas</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Lara</td>
+            <td>45</td>
+        </tr>
+    </table>
+</body>
+</html>
