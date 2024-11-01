@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ვებგვერდის სათაური</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header styling */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        /* Section styling */
+        section {
+            padding: 80px 20px;
+            margin-top: 60px;
+        }
+
+        /* First section - Static positioning */
+        .section1 {
+            background-color: #f4f4f4;
+        }
+
+        /* Second section - Relative positioning */
+        .section2 {
+            background-color: #e4e4e4;
+            padding: 50px;
+        }
+
+        .section2 .relative-block {
+            position: relative;
+            left: 20px;
+            top: 20px;
+            padding: 10px;
+            background-color: #ffcccb;
+        }
+
+        /* Third section - Absolute positioning */
+        .section3 {
+            background-color: #d4d4d4;
+            padding: 50px;
+            position: relative;
+        }
+
+        .section3 .absolute-block {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            padding: 10px;
+            background-color: #add8e6;
+        }
+
+        /* Fourth section - Sticky element */
+        .section4 {
+            background-color: #c4c4c4;
+            padding: 50px;
+            height: 500px;
+        }
+
+        .section4 h2 {
+            position: -webkit-sticky; /* Safari compatibility */
+            position: sticky;
+            top: 10px;
+            background-color: #ffd700;
+            padding: 10px;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Footer styling */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>ვებგვერდის სათაური</h1>
+        <nav>
+            <a href="#section1">სექცია 1</a>
+            <a href="#section2">სექცია 2</a>
+            <a href="#section3">სექცია 3</a>
+            <a href="#section4">სექცია 4</a>
+        </nav>
+    </header>
+
+    <!-- Content Section 1: Static Position -->
+    <section id="section1" class="section1">
+        <h2>Static პოზიციონირება</h2>
+        <p>ეს არის პირველი სექცია, რომლის პოზიციონირება ნაგულისხმევია (static).</p>
+    </section>
+
+    <!-- Content Section 2: Relative Position -->
+    <section id="section2" class="section2">
+        <h2>Relative პოზიციონირება</h2>
+        <div class="relative-block">
+            <p>ეს არის კონტენტის ბლოკი, რომელიც გადანაცვლებულია მარცხენა და ზედა მიმართულებით.</p>
+        </div>
+    </section>
+
+    <!-- Content Section 3: Absolute Position -->
+    <section id="section3" class="section3">
+        <h2>Absolute პოზიციონირება</h2>
+        <div class="absolute-block">
+            <p>ეს კონტენტი არის აბსოლუტურად პოზიციონირებული და მიმაგრებულია ამ სექციის ზედა მარჯვენა კუთხესთან.</p>
+        </div>
+    </section>
+
+    <!-- Content Section 4: Sticky Position -->
+    <section id="section4" class="section4">
+        <h2>Sticky პოზიციონირება</h2>
+        <p>ამ სექციაში, სათაური იქნება სტიკი ელემენტი და დარჩება გვერდის თავში გარკვეულ წერტილამდე.</p>
+        <p>მეტი კონტენტი აქ...</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>ვებგვერდის ქვედა ნაწილში დამაგრებული ფუტერი</p>
+    </footer>
+
+</body>
+</html>
+
