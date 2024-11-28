@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moving Red Cube</title>
+  <style>
+    /* Make sure the body takes up the entire viewport */
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0; /* Light background for contrast */
+    }
+
+    /* Style for the cube */
+    #cube {
+      width: 200px;               /* Cube size */
+      height: 200px;
+      background-color: red;      /* Red color */
+      position: absolute;         /* Absolute positioning to move the cube */
+      transition: all 0.5s ease;  /* Smooth transition for movement */
+    }
+  </style>
+</head>
+<body>
+  <div id="cube"></div>
+
+  <script>
+    const cube = document.getElementById('cube');
+    let clickCount = 0;
+
+    // Initial position of the cube
+    cube.style.left = '50%';
+    cube.style.top = '50%';
+    cube.style.transform = 'translate(-50%, -50%)';  // Center the cube
+
+    cube.addEventListener('click', () => {
+      switch (clickCount) {
+        case 0:
+          // Move right
+          cube.style.transform = 'translate(-50%, -50%) translateX(200px)';
+          clickCount = 1;
+          break;
+        case 1:
+          // Move down
+          cube.style.transform = 'translate(-50%, -50%) translateY(200px)';
+          clickCount = 2;
+          break;
+        case 2:
+          // Move left
+          cube.style.transform = 'translate(-50%, -50%) translateX(-200px)';
+          clickCount = 3;
+          break;
+        case 3:
+          // Move up
+          cube.style.transform = 'translate(-50%, -50%) translateY(-200px)';
+          clickCount = 4;
+          break;
+        case 4:
+          // Return to start position (centered)
+          cube.style.transform = 'translate(-50%, -50%)'; 
+          clickCount = 0;
+          break;
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!--HTML ნაწილი:
+<div id="cube"></div> — ეს არის ძირითადი ელემენტი, რომელსაც ჩვენ უნდა გადავადგილოთ.
+3. CSS ნაწილი:
+body {}:
+
+margin: 0; და padding: 0; — ეს სტილი თავიდან აცილებს გვერდის მარგინებს და პედინგებს.
+display: flex; justify-content: center; align-items: center; — ეს ფუნქციები ემსახურება, რომ ელემენტები ცენტრში განლაგდეს როგორც ჰორიზონტალურად, ასევე ვერტიკალურად.
+height: 100vh; — სხეული მოიცავს მთლიან ეკრანს.
+#cube {}:
+
+width: 200px; height: 200px; — კუბის ზომაა 200x200 პიქსელი.
+background-color: red; — კუბი იქნება წითელი.
+position: absolute; — საშუალებას გვაძლევს გადავადგილოთ კუბი ეკრანზე.
+transition: all 0.5s ease; — ეს სტილი საშუალებას გვაძლევს კუბი გადაიადგილოს თანდათან 0.5 წამში.
+4. JavaScript ნაწილი:
+let clickCount = 0; — ყოველ მომდევნო კლიკზე ითვლება რამდენი ნაბიჯი შესრულდა.
+cube.style.transform = 'translate(-50%, -50%)'; — საწყისი პოზიცია არის ცენტრში. ეს ხდება transform თვისებით, რომელიც გადაადგილებს კუბს 50%-ით მარცხნივ და 50%-ით ზევით, რათა ის ეკრანის ცენტრში იყოს.
+პასუხი კლიკზე:
+პირველი კლიკი: კუბი გადის მარჯვნივ (translateX(200px)).
+მეორე კლიკი: კუბი გადის ქვემოთ (translateY(200px)).
+მესამე კლიკი: კუბი გადის მარცხნივ (translateX(-200px)).
+მეოთხე კლიკი: კუბი გადის ზევით (translateY(-200px)).
+მეხუთე კლიკი: კუბი ბრუნდება საწყის პოზიციაზე.
+5. რატომ მუშაობს ეს კოდი:
+HTML — კუბის ელემენტს ვამატებთ.
+CSS — მისთვის განსაზღვრავთ ზომას, ფერს, პოზიციონირებას და ანიმაციის ეფექტებს.
+JavaScript — აყენებს შესაბამის მოქმედებებს, რაც დამოკიდებულია რამდენჯერ დაიკლიკება კუბზე.-->
+
+
+
