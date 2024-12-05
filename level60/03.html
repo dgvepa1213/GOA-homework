@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Elements</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            position: relative;
+            width: 80%;
+            height: 80%;
+        }
+
+        .element {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #007BFF;
+            opacity: 0;
+        }
+
+        .top {
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: slideInFromTop 1s ease forwards;
+        }
+
+        .bottom {
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: slideInFromBottom 1s ease 0.5s forwards;
+        }
+
+        .left {
+            left: -100px;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: slideInFromLeft 1s ease 1s forwards;
+        }
+
+        .right {
+            right: -100px;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: slideInFromRight 1s ease 1.5s forwards;
+        }
+
+        @keyframes slideInFromTop {
+            to {
+                top: 10%;
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromBottom {
+            to {
+                bottom: 10%;
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromLeft {
+            to {
+                left: 10%;
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromRight {
+            to {
+                right: 10%;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="element top"></div>
+        <div class="element bottom"></div>
+        <div class="element left"></div>
+        <div class="element right"></div>
+    </div>
+</body>
+</html>

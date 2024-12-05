@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Text Fade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .text {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            font-size: 24px;
+            color: #d90808;
+        }
+
+        .container:hover .text {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">HONOURED ONE!!! GOA BEST!!!</div>
+    </div>
+</body>
+</html>

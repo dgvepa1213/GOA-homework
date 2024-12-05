@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Text Fade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            width: 80%;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            opacity: 0.5;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .image-container img:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="orig.webp" alt="Image 1">
+        <img src="i (1).webp" alt="">
+        <img src="e85382a547d6ed47bb9880f071e77c33.jpg" alt="">
+        <img src="i (2).webp" alt="">
+        <img src="ef848c4f95e920b79263dfe983bf320b.jpg" alt="">
+        <img src="orig (1).webp" alt="">
+        <img src="1d2e418a00a335baca52f3eac105013a.jpg" alt="">
+        <img src="7e041ef23976ba0410b2ba7efa5677f8.jpg" alt="">
+        <img src="i (3).webp" alt="">
+        <img src="4454e989c30c3fea961fa57f96ba1646.jpg" alt="">
+       
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Text Fade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .text {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .container:hover .text {
+            opacity: 1;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .button:hover {
+            transform: rotate(145deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">This text appears slowly!</div>
+    </div>
+    <button class="button">Click Me</button>
+</body>
+</html>
