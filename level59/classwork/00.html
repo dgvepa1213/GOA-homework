@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow Animation</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
+
+        .slideshow {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .slideshow img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            animation: fade 10s infinite;
+        }
+
+        .slideshow img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .slideshow img:nth-child(2) {
+            animation-delay: 2.5s;
+        }
+
+        .slideshow img:nth-child(3) {
+            animation-delay: 5s;
+        }
+
+        .slideshow img:nth-child(4) {
+            animation-delay: 7.5s;
+        }
+
+        @keyframes fade {
+            0%, 25% {
+                opacity: 1;
+            }
+            30%, 100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow">
+        <img src="c33e02f1b887421896d48ae175fd856f.jpg" alt="Image 1">
+        <img src="ef848c4f95e920b79263dfe983bf320b.jpg" alt="Image 2">
+        <img src="i (1).webp" alt="Image 3">
+        <img src="i.webp" alt="Image 4">
+    </div>
+</body>
+</html>
