@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Variables Example</title>
+<style>
+  
+  :root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --tertiary-color: #e74c3c;
+    --background-color: #f5f5f5;
+    --font-size-large: 24px;
+    --font-size-medium: 18px;
+    --font-size-small: 14px;
+    --letter-spacing-wide: 2px;
+    --padding: 20px;
+    --margin: 10px;
+    --transition-duration: 0.3s;
+  }
+
+  body {
+    background-color: var(--background-color);
+    font-family: Arial, sans-serif;
+    padding: var(--padding);
+    margin: var(--margin);
+  }
+
+  .box {
+    padding: var(--padding);
+    margin: var(--margin);
+    border: 2px solid black;
+    transition: transform var(--transition-duration);
+  }
+
+  .box:hover {
+    transform: scale(1.1);
+  }
+
+  /* ელემენტებისთვის სტილები */
+  .box-1 {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    font-size: var(--font-size-large);
+    letter-spacing: var(--letter-spacing-wide);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+
+  .box-2 {
+    color: var(--secondary-color);
+    background-color: var(--tertiary-color);
+    font-size: var(--font-size-medium);
+    letter-spacing: var(--letter-spacing-wide);
+    display: grid;
+    place-items: center;
+    height: 100px;
+  }
+
+  .box-3 {
+    color: var(--tertiary-color);
+    background-color: var(--primary-color);
+    font-size: var(--font-size-small);
+    letter-spacing: var(--letter-spacing-wide);
+    display: block;
+    position: relative;
+    padding: var(--padding);
+  }
+
+  .box-3::after {
+    content: "Position Example";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: var(--font-size-small);
+    color: white;
+  }
+</style>
+</head>
+<body>
+  <div class="box box-1">Flex Element</div>
+  <div class="box box-2">Grid Element</div>
+  <div class="box box-3">Position Element</div>
+</body>
+</html>

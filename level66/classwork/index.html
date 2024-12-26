@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deprecated CSS Example</title>
+<style>
+  .container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: flex;
+  }
+
+  .background {
+    background: -webkit-gradient(linear, left top, right bottom, from(#fff), to(#000));
+    background: linear-gradient(to bottom right, #fff, #000);
+    height: 200px;
+  }
+
+  .box {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="background">
+      <div class="box"></div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+<!--Flexbox-ის წინამორბედი იყო -webkit-box და -moz-box. ისინი გამოიყენებოდა ძველი ბრაუზერებისთვის, მაგრამ თანამედროვე ბრაუზერები მხარს უჭერენ მხოლოდ display: flex;.-->
+<!--ეს იყო CSS3 linear-gradient-ის წინამორბედი. მაგალითად,
+-webkit-gradient(linear, left top, right bottom, from(#fff), to(#000));-->
+
+<!--შეიცვალა მარტივი და უფრო ინტუიციური სინტაქსით:
+
+css
+Copy code
+linear-gradient(to bottom right, #fff, #000);-->
+<!--ეს თვისება იყო საჭირო ძველი ბრაუზერებისთვის, რომლებიც არ აღიარებდნენ border-radius. თანამედროვე ბრაუზერები პირდაპირ მხარს უჭერენ ახალ სინტაქსს:
+
+css
+Copy code
+border-radius: 10px;-->
+
+
