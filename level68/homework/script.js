@@ -198,10 +198,43 @@ console.log("Have a " + "great day!"); // "Have a great day!"
 
 
 
-for (let i = 10; i >= 0; i--) {
-    alert(`The world will be destroyed in ${i} seconds`);
-    console.log(`The world will be destroyed in ${i} seconds`);
-}
+alert("The world will be destroyed in 10 seconds");
+console.log("The world will be destroyed in 10 seconds");
+
+alert("The world will be destroyed in 9 seconds");
+console.log("The world will be destroyed in 9 seconds");
+
+alert("The world will be destroyed in 8 seconds");
+console.log("The world will be destroyed in 8 seconds");
+
+alert("The world will be destroyed in 7 seconds");
+console.log("The world will be destroyed in 7 seconds");
+
+alert("The world will be destroyed in 6 seconds");
+console.log("The world will be destroyed in 6 seconds");
+
+alert("The world will be destroyed in 5 seconds");
+console.log("The world will be destroyed in 5 seconds");
+
+alert("The world will be destroyed in 4 seconds");
+console.log("The world will be destroyed in 4 seconds");
+
+alert("The world will be destroyed in 3 seconds");
+console.log("The world will be destroyed in 3 seconds");
+
+alert("The world will be destroyed in 2 seconds");
+console.log("The world will be destroyed in 2 seconds");
+
+alert("The world will be destroyed in 1 second");
+console.log("The world will be destroyed in 1 second");
+
+alert("The world will be destroyed in 0 seconds");
+console.log("The world will be destroyed in 0 seconds");
+
+
+//alert() არის ფუნქცია, რომელიც გამოიყენება ბრაუზერში, რომ მომხმარებელს აჩვენოს შეტყობინების ფანჯარა (popup window).
+
+//ეს ფუნქცია შესაფერისია იმ დროს, როცა საჭიროა მომხმარებლისთვის კონკრეტული შეტყობინების ჩვენება, მაგალითად, გაფრთხილების, ინსტრუქციის ან სხვა ინფორმაციის გამოსატანად.
 
 
 
@@ -209,5 +242,22 @@ for (let i = 10; i >= 0; i--) {
 
 
 
+//console.log() არის JavaScript-ის ფუნქცია, რომელიც გამოიყენება ტექსტის, მონაცემების ან შეტყობინების გამოსატანად ბრაუზერის დეველოპმენტ ტულბოქსში (Console tab). ეს ფუნქცია ძირითადად გამოიყენება კოდის დინამიკის გასაგებად, შეცდომების პოვნისა და ტესტირებისთვის.
+//
+
+
+
+
+
+
+
+
+
+//JavaScript (JS) არის მაღალი დონის, ინტერპრეტირებული პროგრამირების ენა, რომელიც ძირითადად გამოიყენება ვებ-გვერდებზე დინამიური და ინტერაქტიული ფუნქციების დასამატებლად. ის შეიქმნა, რათა HTML და CSS-ის გვერდებზე დაემატებინა ინტერაქტიულობა.
+
+
+//JavaScript-ის ძირითადი მახასიათებლები:
+// JavaScript არის დინამიური ენა, რომელიც გამოიყენება ვებგვერდების ლოგიკის დასაწერად
+//JavaScript ძირითადად გამოიყენება ვებსაიტებზე ინტერაქტიული ფუნქციების დასამატებლად.
 
 
