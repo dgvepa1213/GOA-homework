@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>პირადი ინფორმაცია</title>
+</head>
+<body>
+    <h1>პირადი ინფორმაცია</h1>
+    <button onclick="showInfo()">ინფორმაციის ნახვა</button>
+
+    <script>
+        function showInfo() {
+            // პირადი ინფორმაცია
+            const name = "Erekle"; 
+            const surname = "Dgvepadze"; 
+            const age = 13; 
+            const city = "Batumi"; 
+
+            // ცვლადების გაერთიანება ტექსტში
+            const personalInfo = `მე ვარ ${name} ${surname}, ${age} წლის, და ვცხოვრობ ${city}-ში.`;
+
+            // კონსოლში გამოყვანა
+            console.log(personalInfo);
+
+            // Alert-ში გამოყვანა
+            alert(personalInfo);
+        }
+    </script>
+</body>
+</html>
+

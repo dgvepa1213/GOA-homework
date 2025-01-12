@@ -54,7 +54,7 @@ console.log(500 - 123); // 377
 
 
 // alert
-alert(2 * 3); // 6
+alert(3 * 3); // 9
 alert(10 * 5); // 50
 alert(0 * 100); // 0
 alert(1.5 * 2); // 3
