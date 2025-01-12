@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+#clickable-image {
+    width: 60%;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+#clickable-image:hover {
+    transform: scale(1.05); /* Slightly zoom in the image on hover */
+}
