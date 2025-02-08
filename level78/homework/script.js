@@ -1,8 +1,13 @@
-let hour = parseInt(readLine(), 10);
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-if (hour >= 0 && hour <= 11) {
-    console.log("am");
-} else {
-    console.log("pm");
-}
+rl.question('', (hour) => {
+  hour = parseInt(hour, 10);
+  console.log(hour);
+  rl.close();
+});
+
 
