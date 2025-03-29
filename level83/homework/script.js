@@ -1,0 +1,21 @@
+//function main(){
+    //move();
+    //turnLeft();
+    //move();
+    //move();
+    //turnLeft();
+    //move();
+    //turnRight();
+ // move();
+  //turnRight();
+  //move();
+  //move();
+  //turnRight();
+  //move();
+  //move();
+  //turnLeft();
+  //move();
+  //turnRight();
+  //move();
+  //turnRight();
+  //move();
