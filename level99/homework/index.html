@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        // Create a new <p> element and append it to the body
+        const pElement = document.createElement("p");
+        pElement.textContent = "This is a paragraph.";
+        document.body.appendChild(pElement);
+
+        // Create a new <h2> element and modify its text
+        const h2Element = document.createElement("h2");
+        h2Element.textContent = "Subheading";
+        document.body.appendChild(h2Element);
+        h2Element.textContent = "Updated Subheading";
+
+        // Create and remove a <div> element
+        const divElement = document.createElement("div");
+        divElement.textContent = "This is a div.";
+        document.body.appendChild(divElement);
+        document.body.removeChild(divElement);
+
+        // Create a <ul> with three <li> elements
+        const ulElement = document.createElement("ul");
+        const items = ["Item 1", "Item 2", "Item 3"];
+
+        items.forEach(text => {
+            const liElement = document.createElement("li");
+            liElement.textContent = text;
+            ulElement.appendChild(liElement);
+        });
+
+        document.body.appendChild(ulElement);
+
+        // Access first and last child elements of the <ul>
+        console.log("First item:", ulElement.firstElementChild.textContent);
+        console.log("Last item:", ulElement.lastElementChild.textContent);
+
+        // Insert an <h3> element before the first child of the body
+        const h3Element = document.createElement("h3");
+        h3Element.textContent = "Inserted Heading";
+        document.body.insertBefore(h3Element, document.body.firstChild);
+
+        // Create a <span> element and append it to an existing <div> with id "container"
+        const spanElement = document.createElement("span");
+        spanElement.textContent = "This is a span.";
+
+        const containerDiv = document.getElementById("container");
+        containerDiv.appendChild(spanElement);
+
+        // Access and log the parent element of the <span> element
+        console.log("Parent of span:", spanElement.parentElement);
+    </script>
+</body>
+</html>
