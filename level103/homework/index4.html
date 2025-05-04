@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>შეკითხვის შემოწმება</title>
+</head>
+<body>
+    <p>რომელი წელი არის საქართველოს დამოუკიდებლობის აღდგენის წელი?</p>
+    <form>
+        <input type="radio" name="answer" value="1990"> 1990<br>
+        <input type="radio" name="answer" value="1991"> 1991<br>
+        <input type="radio" name="answer" value="1992"> 1992<br>
+        <input type="radio" name="answer" value="1989"> 1989<br>
+    </form>
+    <button onclick="checkAnswer()">შემოწმება</button>
+    <p id="result"></p>
+
+    <script>
+        function checkAnswer() {
+            let selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            let result = document.getElementById('result');
+            
+            if (selectedAnswer) {
+                if (selectedAnswer.value === "1991") {
+                    result.textContent = "სწორია! 🎉";
+                    result.style.color = "green";
+                } else {
+                    result.textContent = "არასწორია, სცადე კიდევ ერთხელ!";
+                    result.style.color = "red";
+                }
+            } else {
+                result.textContent = "გთხოვთ, აირჩიოთ პასუხი!";
+                result.style.color = "orange";
+            }
+        }
+    </script>
+</body>
+</html>

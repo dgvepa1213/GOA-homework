@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ტექსტის დამალვა/გამოჩენა</title>
+</head>
+<body>
+    <p id="text">ეს არის მაგალითი ტექსტი, რომელიც შეგიძლია დამალო ან გამოაჩინო!</p>
+    <button onclick="toggleText()">ტექსტის დამალვა/გამოჩენა</button>
+
+    <script>
+        function toggleText() {
+            let text = document.getElementById('text');
+            text.style.display = text.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

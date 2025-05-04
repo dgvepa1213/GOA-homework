@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Slider</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e1f26, #2a2c36);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: #fff;
+    }
+
+    .slider {
+      position: relative;
+      width: 90%;
+      max-width: 1000px;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .slides {
+      position: relative;
+      height: 550px;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .navigation {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 30px;
+      z-index: 2;
+    }
+
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid #00ffcc;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 26px;
+      color: #00ffcc;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .nav-btn:hover {
+      background: #00ffcc;
+      color: #1e1f26;
+    }
+
+    .dots {
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin: 0 6px;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .dot.active {
+      background-color: #00ffcc;
+    }
+
+    @media (max-width: 768px) {
+      .slides {
+        height: 360px;
+      }
+
+      .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .slides {
+        height: 240px;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="slider" id="slider">
+  <div class="slides">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.KMYG278xotyK-AFmrhpXYgHaEK?cb=iwc1&rs=1&pid=ImgDetMain" alt="Game 1" class="slide active">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.xdVSN3Owa61SdWvAaiZHNgHaHa?cb=iwc1&rs=1&pid=ImgDetMain" alt="Game 2" class="slide">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.HGbjYHM_KQ6pS9rv3e0_ZwHaHa?cb=iwc1&rs=1&pid=ImgDetMain" alt="Game 3" class="slide">
+    <img src="https://logos-world.net/wp-content/uploads/2020/10/Roblox-Logo-2018-present.jpg" alt="Game 4" class="slide">
+  </div>
+
+  <div class="navigation">
+    <button class="nav-btn" id="prevBtn">&#10094;</button>
+    <button class="nav-btn" id="nextBtn">&#10095;</button>
+  </div>
+
+  <div class="dots" id="dots"></div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  const dotsContainer = document.getElementById("dots");
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+  const slider = document.getElementById("slider");
+
+  let currentIndex = 0;
+  let interval;
+
+  // Create dots
+  slides.forEach((_, index) => {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (index === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => showSlide(index));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll(".dot");
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      dots[i].classList.remove("active");
+      if (i === index) {
+        slide.classList.add("active");
+        dots[i].classList.add("active");
+      }
+    });
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  function startAutoSlide() {
+    interval = setInterval(nextSlide, 4000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(interval);
+  }
+
+  nextBtn.addEventListener("click", () => {
+    nextSlide();
+    resetAutoSlide();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    prevSlide();
+    resetAutoSlide();
+  });
+
+  slider.addEventListener("mouseenter", stopAutoSlide);
+  slider.addEventListener("mouseleave", startAutoSlide);
+
+  function resetAutoSlide() {
+    stopAutoSlide();
+    startAutoSlide();
+  }
+
+  startAutoSlide();
+</script>
+
+</body>
+</html>

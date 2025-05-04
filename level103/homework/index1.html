@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>სურათის შეცვლა</title>
+    <style>
+        #imageContainer {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <img id="imageContainer" src="https://images.pexels.com/photos/572910/pexels-photo-572910.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="სურათი">
+    <button onclick="changeImage()">სურათის შეცვლა</button>
+
+    <script>
+        function changeImage() {
+            let image = document.getElementById('imageContainer');
+            image.src = image.src.includes('image1.jpg') ? 'image2.jpg' : 'image1.jpg';
+        }
+    </script>
+</body>
+</html>

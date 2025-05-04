@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ღილაკების პროგრამა</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        img {
+            width: 500px;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="showImage('//cdn.pixabay.com/photo/2023/03/17/19/22/river-7859329_1280.jpg')">picture 1</button>
+    <button onclick="showImage('//cdn.pixabay.com/photo/2021/02/23/16/36/nature-6043986_1280.jpg')">picture 2</button>
+    <button onclick="showImage('//cdn.pixabay.com/photo/2021/10/13/18/40/river-6707429_1280.jpg')">picture 3</button>
+
+    <div>
+        <img id="displayImage" src="" alt="სურათი გამოჩნდება აქ">
+    </div>
+
+    <script>
+        function showImage(imageSrc) {
+            document.getElementById('displayImage').src = imageSrc;
+        }
+    </script>
+
+</body>
+</html>
