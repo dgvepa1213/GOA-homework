@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: background-color 0.5s;
+            padding: 50px;
+        }
+        form {
+            max-width: 300px;
+            margin: auto;
+            padding: 20px;
+            background: #f4f4f4;
+            border-radius: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #message {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="registrationForm">
+        <h2>Registration Form</h2>
+        <input type="text" id="firstName" placeholder="First Name">
+        <input type="text" id="lastName" placeholder="Last Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <input type="password" id="confirmPassword" placeholder="Confirm Password">
+        <button type="button" onclick="validateForm()">Register</button>
+    </form>
+    <p id="message"></p>
+
+    <script>
+        function validateForm() {
+            let firstName = document.getElementById("firstName").value;
+            let lastName = document.getElementById("lastName").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+            let message = document.getElementById("message");
+
+            if (!firstName || !lastName || !email || !password || !confirmPassword) {
+                alert("All fields must be filled!");
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                document.body.style.backgroundColor = "red";
+                message.innerText = "WARNING";
+            } else {
+                document.body.style.backgroundColor = "lightgreen";
+                message.innerText = "Successfully login";
+            }
+        }
+    </script>
+
+</body>
+</html>
