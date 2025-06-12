@@ -1,7 +1,7 @@
 /////////////////
 
 function fakeBin(x) {
-    return x.replace(/\d/g, digit => digit < 5 ? '0' : '1');
+ return x.replace(d/g, digit => digit < 5 ? '0' : '1');
   }
 
   ////////////////////////

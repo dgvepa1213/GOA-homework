@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selection Methods</title>
+    <style>
+        .example {
+            background-color: lightgray;
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="title">DOM Selection Example</h1>
+    <p class="example">First paragraph</p>
+    <p class="example">Second paragraph</p>
+    <div name="customDiv">Custom div with name attribute</div>
+    <button onclick="getElements()">Click to Get Elements</button>
+
+    <script>
+        function getElements() {
+            // 1. getElementById – ID-ით ელემენტის წამოღება
+            let titleElement = document.getElementById("title");
+            console.log("getElementById:", titleElement.textContent);
+
+            // 2. getElementsByClassName – კლასის სახელით ელემენტების წამოღება
+            let exampleElements = document.getElementsByClassName("example");
+            console.log("getElementsByClassName:", exampleElements[0].textContent);
+
+            // 3. getElementsByTagName – tag-ის სახელით ელემენტების წამოღება
+            let paragraphElements = document.getElementsByTagName("p");
+            console.log("getElementsByTagName:", paragraphElements[1].textContent);
+
+            // 4. querySelector – პირველი ელემენტის წამოღება CSS სელექტორის მიხედვით
+            let firstExample = document.querySelector(".example");
+            console.log("querySelector:", firstExample.textContent);
+
+            // 5. querySelectorAll – ყველა შესაბამისი ელემენტის წამოღება CSS სელექტორის მიხედვით
+            let allExamples = document.querySelectorAll(".example");
+            console.log("querySelectorAll:", allExamples.length + " elements found");
+
+            // 6. getElementsByName – name ატრიბუტით ელემენტის წამოღება
+            let nameElement = document.getElementsByName("customDiv")[0];
+            console.log("getElementsByName:", nameElement.textContent);
+        }
+    </script>
+
+</body>
+</html>

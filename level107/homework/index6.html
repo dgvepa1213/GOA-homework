@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Box Example</title>
+    <style>
+        .dynamic-box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            border: 2px solid blue;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="createBox()">Create Box</button>
+
+    <script>
+        function createBox() {
+            let newBox = document.createElement("div"); // Create a new <div> element
+            newBox.textContent = "I'm alive!"; // Add text inside the div
+            newBox.classList.add("dynamic-box"); // Apply styles using classList.add()
+
+            document.body.appendChild(newBox); // Append the new div to the body
+        }
+    </script>
+
+</body>
+</html>

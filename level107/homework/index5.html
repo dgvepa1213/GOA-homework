@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector All Example</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+        .highlighted {
+            background-color: yellow;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+
+    <button onclick="highlightBoxes()">Highlight Boxes</button>
+
+    <script>
+        function highlightBoxes() {
+            let boxes = document.querySelectorAll(".box"); // Select all elements with .box class
+            boxes.forEach(box => {
+                box.classList.add("highlighted"); // Add 'highlighted' class to each box
+            });
+        }
+    </script>
+
+</body>
+</html>

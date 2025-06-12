@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove List Items Example</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            background-color: lightgray;
+            margin: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+    <button id="clear-btn">Clear List</button>
+
+    <script>
+        document.getElementById("clear-btn").addEventListener("click", function() {
+            let list = document.getElementById("list"); // Select the <ul> element
+            
+            while (list.firstChild) { // Loop until there are no children left
+                list.removeChild(list.firstChild); // Remove the first child element
+            }
+        });
+    </script>
+
+</body>
+</html>

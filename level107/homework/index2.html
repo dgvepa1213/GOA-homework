@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Styles Example</title>
+    <style>
+        .note {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <p class="note">This is the first note.</p>
+    <p class="note">This is the second note.</p>
+    <p class="note">This is the third note.</p>
+
+    <button onclick="changeStyles()">Apply Styles</button>
+
+    <script>
+        function changeStyles() {
+            let notes = document.getElementsByClassName("note"); // Select elements by class name
+            for (let i = 0; i < notes.length; i++) {
+                notes[i].style.color = "red"; // Change text color to red
+                notes[i].style.fontWeight = "bold"; // Make text bold
+            }
+        }
+    </script>
+
+</body>
+</html>

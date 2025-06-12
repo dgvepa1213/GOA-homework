@@ -1,5 +1,5 @@
 function sameCase(a, b) {
-    if (!/[a-zA-Z]/.test(a) || !/[a-zA-Z]/.test(b)) {
+    if (![a-zA-Z]/test(a) || ![a-zA-Z]/test(b)) {
       return -1; // If either character is not a letter
     }
     

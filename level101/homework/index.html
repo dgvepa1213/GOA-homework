@@ -1,0 +1,20 @@
+<ul id="myList">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<script>
+  let ul = document.getElementById("myList");
+
+  // Add new item to end
+  let newLi = document.createElement("li");
+  newLi.textContent = "New Item";
+  ul.appendChild(newLi);
+
+  // Remove first item
+  ul.removeChild(ul.firstElementChild);
+
+  // Change text content of second item
+  ul.children[1].textContent = "Updated Item";
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count and Style List Items</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+    <button onclick="styleListItems()">Apply Styles & Count</button>
+    <p id="countMessage"></p>
+
+    <script>
+        function styleListItems() {
+            let listItems = document.getElementsByTagName("li"); // Select all <li> elements
+            document.getElementById("countMessage").textContent = "Total <li> items: " + listItems.length; // Display count
+            
+            for (let i = 0; i < listItems.length; i++) {
+                listItems[i].style.border = "2px solid black"; // Add border to each <li>
+            }
+        }
+    </script>
+
+</body>
+</html>
